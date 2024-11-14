@@ -14,4 +14,6 @@ inline void pwm_init(volatile uint8_t *timer_reg_a, volatile uint8_t *timer_reg_
     *timer_reg_b = _BV(CS01);
 }
 
+inline void pwm_deinit(volatile uint8_t *timer_reg_a) { *timer_reg_a = 0; }
+
 #endif
